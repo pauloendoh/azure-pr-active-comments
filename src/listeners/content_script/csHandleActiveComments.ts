@@ -15,11 +15,11 @@ export const csHandleActiveComments = async () => {
   let clickable = div as HTMLElement
   clickable.click()
 
-  const allDivs = document.querySelectorAll('span')
+  const allSpans = document.querySelectorAll('span')
 
-  if (!allDivs) return
+  if (!allSpans) return
 
-  const activeCommentDiv = Array.from(allDivs).find((div) =>
+  const activeCommentDiv = Array.from(allSpans).find((div) =>
     div.textContent?.includes('Active comments')
   )
 

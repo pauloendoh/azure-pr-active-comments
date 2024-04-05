@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
 
-  "name": "Github most liked",
-  "description": "Easily navigate through issues and discussions on Github",
+  "name": "Azure PR - Active Comments",
+  "description": "Show 'Active comments' by default in Azure DevOps PRs",
   "version": "1.0",
 
   "options_ui": {
@@ -20,7 +20,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://github.com/*"],
+      "matches": ["*://dev.azure.com/*"],
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
@@ -43,19 +43,5 @@
     "128": "icon.png"
   },
 
-  "host_permissions": ["<all_urls>"],
-  "commands": {
-    "nextIssue": {
-      "suggested_key": {
-        "default": "Ctrl+L"
-      },
-      "description": "Go to next most liked"
-    },
-    "prevIssue": {
-      "suggested_key": {
-        "default": "Ctrl+K"
-      },
-      "description": "Go to previous most liked"
-    }
-  }
+  "host_permissions": ["<all_urls>"]
 }

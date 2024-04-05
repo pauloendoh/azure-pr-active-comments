@@ -14,9 +14,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 })
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  background_handleTab(tab, {
-    type: 'open',
-  })
+  background_handleTab(tab)
 })
 
 // listen to focused windows tab

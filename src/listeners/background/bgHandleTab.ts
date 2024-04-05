@@ -1,12 +1,7 @@
-import { isValidAzurePrUrl } from '../../utils/azure/isValidAzurePRurl'
+import { isValidAzurePrUrl } from '../../utils/azure/isValidAzurePrUrl'
 import { messageTypes } from '../../utils/messageTypes'
 
-export const background_handleTab = async (
-  tab: chrome.tabs.Tab,
-  options?: {
-    type: 'open'
-  }
-) => {
+export const background_handleTab = async (tab: chrome.tabs.Tab) => {
   if (!tab.url || !tab.id) return
 
   if (isValidAzurePrUrl(tab.url)) {
